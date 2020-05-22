@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SampleButton : MonoBehaviour
 {
-    private GameObject categoryPanel = GameObject.Find("Category Scroll View");
+    public GameObject manager;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +19,6 @@ public class SampleButton : MonoBehaviour
 
     public void OnClick()
     {
-        categoryPanel.GetComponent<Script>();
+        manager.GetComponent<CategoryManage>().SetToSample();
     }
 }

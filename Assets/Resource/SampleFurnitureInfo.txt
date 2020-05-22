@@ -1,2 +1,2 @@
-bed 1 2
-sofa 2 1
+bed 1
+sofa 2

@@ -2,22 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript1 : MonoBehaviour
+public class PlusButton : MonoBehaviour
 {
+    public GameObject category;
+    public GameObject offButton;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
      public void OnClick()
     {
-        
+        TurnOnCategory();
+    }
+
+    public void TurnOnCategory()
+    {
+        category.SetActive(true);
+        offButton.SetActive(true);
+        gameObject.SetActive(false);
     }
 }

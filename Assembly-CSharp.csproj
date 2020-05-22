@@ -63,13 +63,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FurnimureCardInit.cs" />
-    <Compile Include="Assets\Scripts\ChangeItems.cs" />
-    <Compile Include="Assets\Scripts\CurrentInfo.cs" />
+    <Compile Include="Assets\FurnitureData.cs" />
+    <Compile Include="Assets\Scripts\CategoryManage.cs" />
+    <Compile Include="Assets\Scripts\CategoryOff.cs" />
+    <Compile Include="Assets\Scripts\FurnimureCardInit.cs" />
+    <Compile Include="Assets\Scripts\FurnitureBlock.cs" />
+    <Compile Include="Assets\Scripts\Joystick.cs" />
+    <Compile Include="Assets\Scripts\LeftRotate.cs" />
+    <Compile Include="Assets\Scripts\LocatingManager.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\PlusButton.cs" />
+    <Compile Include="Assets\Scripts\RightRotate.cs" />
     <Compile Include="Assets\Scripts\SampleButton.cs" />
-    <Compile Include="Assets\Scripts\SqlTest.cs" />
+    <Compile Include="Assets\Scripts\UpdateInfo.cs" />
+    <Compile Include="Assets\Scripts\UpdateValue.cs" />
+    <Compile Include="Assets\Scripts\UserDefineButton.cs" />
+    <Compile Include="Assets\test.cs" />
+    <None Include="Assets\Resource\UserFurnitureInfo.txt" />
     <None Include="Assets\Resource\SampleFurnitureInfo.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/kimse/OneDrive/바탕 화면/Furniture Simulator/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
