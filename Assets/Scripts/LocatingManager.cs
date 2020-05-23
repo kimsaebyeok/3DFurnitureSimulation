@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class LocatingManager : MonoBehaviour
 {
-    private GameObject target;
+    public GameObject target;
     public GameObject joystick;
     public GameObject leftRotate;
     public GameObject rightRotate;
     public GameObject infoPanel;
-    public GameObject cancelButton;
-    public GameObject confirmButton;
-    public Transform spwanPoint;
+    public GameObject block;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,14 +22,20 @@ public class LocatingManager : MonoBehaviour
         
     }
 
-    public void Set(GameObject a)
+    public void Set(GameObject a,Vector3 position, Vector3 scale)
     {
         target = a;
-        a.transform.position = spwanPoint.position;
+        a.transform.position = position;
+        a.transform.localScale = scale;
         joystick.GetComponent<Joystick>().selectedFurniture = a.transform;
         leftRotate.GetComponent<LeftRotate>().target = a.transform;
         rightRotate.GetComponent<RightRotate>().target = a.transform;
         infoPanel.GetComponent<UpdateInfo>().target = a.transform;
         infoPanel.GetComponent<UpdateInfo>().Init();
+    }
+
+    public void ModifyInfo()
+    {
+        block.GetComponent<LocatedListBlock>().RealFurnituring(target.transform.position, target.transform.localScale);
     }
 }

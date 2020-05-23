@@ -18,7 +18,7 @@ public class LeftRotate : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         if(canRotate)
         {
-            target.transform.rotation = Quaternion.Euler(target.transform.rotation.eulerAngles.x, target.transform.rotation.eulerAngles.y + 180 * Time.deltaTime, target.transform.rotation.eulerAngles.z);
+            target.transform.rotation = Quaternion.Euler(target.transform.rotation.eulerAngles.x, target.transform.rotation.eulerAngles.y + 180 * Time.deltaTime*(-1), target.transform.rotation.eulerAngles.z);
         }
     }
 

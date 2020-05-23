@@ -20,10 +20,11 @@ public class UpdateValue : MonoBehaviour
     public void OnChangeValue()
     {
         panel.GetComponent<UpdateInfo>().isUpdated = true;
+        Debug.Log("와");
     }
 
     public void OnEndEdit()
     {
-        panel.GetComponent<UpdateInfo>().isUpdated = true;
+        //panel.GetComponent<UpdateInfo>().isUpdated = true;
     }
 }

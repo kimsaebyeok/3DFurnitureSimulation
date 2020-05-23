@@ -6,13 +6,6 @@ using UnityEngine;
 
 public class CategoryManage : MonoBehaviour
 {
-    private class Furniture
-    {
-        public string name;
-        public int number;
-        public int x,y,z;
-    }
-
     public List<FurnitureData> furnitureData;
     public GameObject locatingUI;
     public GameObject prefab;
@@ -21,6 +14,9 @@ public class CategoryManage : MonoBehaviour
     public GameObject userCategory;
     public GameObject sampleContent;
     public GameObject userContent;
+    public GameObject locatedList;
+    public GameObject listUI;
+    public GameObject spwanPoint;
     public int initialSize = 10;
 
     // Start is called before the first frame update
@@ -34,7 +30,6 @@ public class CategoryManage : MonoBehaviour
             
         }
         userCategory.SetActive(false);
-        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -43,11 +38,7 @@ public class CategoryManage : MonoBehaviour
         
     }
 
-    public void TurnOffCategory()
-    {
-        plusButton.SetActive(true);
-        gameObject.SetActive(false);
-    }
+    
 
     public void SetToSample()
     {
@@ -63,8 +54,8 @@ public class CategoryManage : MonoBehaviour
     public void Selected(GameObject furniture)
     {
         locatingUI.SetActive(true);
-        locatingUI.GetComponent<LocatingManager>().Set(furniture);
-        gameObject.SetActive(false);
+        locatingUI.GetComponent<LocatingManager>().Set(furniture,spwanPoint.transform.position,new Vector3(1,1,1));
+        listUI.SetActive(false);
     }
 
     private FurnitureBlock MakeBlock(int num)

@@ -5,16 +5,27 @@ using UnityEngine.UI;
 
 public class FurnitureBlock : MonoBehaviour
 {
-    public GameObject selectedUI;
+    public GameObject locatingUI;
     public GameObject categoryManage;
     [SerializeField]
     private FurnitureData furnitureData;
     public FurnitureData FurnitureData{ set { furnitureData = value; } }
+    public GameObject locatedListBlock;
+    public GameObject locatedList;
+    public GameObject listContent;
+   
     // Start is called before the first frame update
 
     public void OnClick()
     {
         GameObject a = Instantiate(furnitureData.FurniturePrefab);
+
+        GameObject block = Instantiate(locatedListBlock);
+        block.GetComponent<LocatedListBlock>().target = a;
+        block.GetComponent<LocatedListBlock>().Setting(furnitureData);
+        locatingUI.GetComponent<LocatingManager>().block = block;
+
+        block.transform.SetParent(listContent.transform);
 
         MeshFilter[] meshFilters = a.GetComponentsInChildren<MeshFilter>();
         CombineInstance[] combine = new CombineInstance[meshFilters.Length];

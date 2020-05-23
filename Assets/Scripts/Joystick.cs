@@ -29,7 +29,7 @@ public class Joystick : MonoBehaviour
     {
         if (canMove)
         {
-            selectedFurniture.transform.Translate(new Vector3(JoyVec.x, -JoyVec.y , 0) * Time.deltaTime * 2f);
+            selectedFurniture.transform.Translate(new Vector3(JoyVec.x,0, JoyVec.y) * Time.deltaTime * 2f,Space.World);
         }
     }
 

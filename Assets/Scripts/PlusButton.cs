@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlusButton : MonoBehaviour
 {
     public GameObject category;
-    public GameObject offButton;
     // Start is called before the first frame update
 
      public void OnClick()
@@ -16,7 +15,6 @@ public class PlusButton : MonoBehaviour
     public void TurnOnCategory()
     {
         category.SetActive(true);
-        offButton.SetActive(true);
         gameObject.SetActive(false);
     }
 }

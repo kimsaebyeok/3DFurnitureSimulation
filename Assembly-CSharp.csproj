@@ -63,21 +63,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FurnitureData.cs" />
+    <Compile Include="Assets\Save.cs" />
     <Compile Include="Assets\Scripts\CategoryManage.cs" />
     <Compile Include="Assets\Scripts\CategoryOff.cs" />
+    <Compile Include="Assets\Scripts\ConfirmItem.cs" />
+    <Compile Include="Assets\Scripts\DeleteItem.cs" />
     <Compile Include="Assets\Scripts\FurnimureCardInit.cs" />
     <Compile Include="Assets\Scripts\FurnitureBlock.cs" />
+    <Compile Include="Assets\Scripts\FurnitureData.cs" />
     <Compile Include="Assets\Scripts\Joystick.cs" />
     <Compile Include="Assets\Scripts\LeftRotate.cs" />
+    <Compile Include="Assets\Scripts\LocatedListBlock.cs" />
     <Compile Include="Assets\Scripts\LocatingManager.cs" />
+    <Compile Include="Assets\Scripts\ManageListUI.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\PlusButton.cs" />
     <Compile Include="Assets\Scripts\RightRotate.cs" />
     <Compile Include="Assets\Scripts\SampleButton.cs" />
+    <Compile Include="Assets\Scripts\SelectLocated.cs" />
+    <Compile Include="Assets\Scripts\TriggerAction.cs" />
     <Compile Include="Assets\Scripts\UpdateInfo.cs" />
     <Compile Include="Assets\Scripts\UpdateValue.cs" />
     <Compile Include="Assets\Scripts\UserDefineButton.cs" />
+    <Compile Include="Assets\Scripts2\Address.cs" />
+    <Compile Include="Assets\Scripts2\AddressInfo.cs" />
+    <Compile Include="Assets\Scripts2\AddressSend.cs" />
+    <Compile Include="Assets\Scripts2\ChangedOptions.cs" />
+    <Compile Include="Assets\Scripts2\InitialButton.cs" />
+    <Compile Include="Assets\Scripts2\InitialUI.cs" />
+    <Compile Include="Assets\Scripts2\RegisterRoom.cs" />
+    <Compile Include="Assets\Scripts2\RoomCreator.cs" />
+    <Compile Include="Assets\Scripts2\SimulateRoom.cs" />
+    <Compile Include="Assets\Scripts2\test2.cs" />
+    <Compile Include="Assets\aaa.cs" />
+    <Compile Include="Assets\ex.cs" />
     <Compile Include="Assets\test.cs" />
     <None Include="Assets\Resource\UserFurnitureInfo.txt" />
     <None Include="Assets\Resource\SampleFurnitureInfo.txt" />
@@ -284,6 +303,9 @@
     </Reference>
     <Reference Include="UnityEngine.XRModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJson">
+      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/Furniture Simulator/Assets/Plugin/LitJson.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

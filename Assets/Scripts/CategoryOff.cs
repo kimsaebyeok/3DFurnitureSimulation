@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CategoryOff : MonoBehaviour
 {
-    public GameObject category;
+    public GameObject plusButton;
+    public GameObject listUI;
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -19,7 +20,7 @@ public class CategoryOff : MonoBehaviour
 
     public void OnClick()
     {
-        category.GetComponent<CategoryManage>().TurnOffCategory();
-        gameObject.SetActive(false);
+        plusButton.SetActive(true);
+        listUI.GetComponent<ManageListUI>().TurnOffCategory();
     }
 }

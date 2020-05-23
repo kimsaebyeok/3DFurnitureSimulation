@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 400008}
   - component: {fileID: 7397228928106401139}
   - component: {fileID: 5810805157439106714}
+  - component: {fileID: -7620399571834537415}
   m_Layer: 0
   m_Name: bed_1
   m_TagString: Located Furniture
@@ -341,8 +342,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100008}
-  m_LocalRotation: {x: -0.7050432, y: -0.005820579, z: 0.0058205817, w: 0.7091167}
-  m_LocalPosition: {x: -0.36957034, y: 0.00007814169, z: 3.265047}
+  m_LocalRotation: {x: -0.7009155, y: 0, z: 0, w: 0.7132443}
+  m_LocalPosition: {x: -0.37, y: 0, z: 3.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -352,7 +353,7 @@ Transform:
   - {fileID: 400006}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.00101, y: -70.714005, z: 70.714005}
+  m_LocalEulerAnglesHint: {x: -89.00101, y: 0, z: 0}
 --- !u!33 &7397228928106401139
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -377,6 +378,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &-7620399571834537415
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &100010
 GameObject:
   m_ObjectHideFlags: 0

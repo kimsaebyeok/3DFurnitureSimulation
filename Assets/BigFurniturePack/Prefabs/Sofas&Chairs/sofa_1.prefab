@@ -89,6 +89,9 @@ GameObject:
   m_Component:
   - component: {fileID: 400002}
   - component: {fileID: -5807390600115173432}
+  - component: {fileID: 8108120166093670054}
+  - component: {fileID: -8887247069854783644}
+  - component: {fileID: 569467006882601433}
   m_Layer: 0
   m_Name: sofa_1
   m_TagString: Located Furniture
@@ -124,6 +127,48 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100002}
   m_Mesh: {fileID: 0}
+--- !u!64 &8108120166093670054
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!114 &-8887247069854783644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c39d7832f2be7d94292993ea66c52c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &569467006882601433
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100002}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0
