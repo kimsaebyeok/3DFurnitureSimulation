@@ -48,7 +48,11 @@ public class LocatedListBlock : MonoBehaviour
 
     public void Delete()
     {
-        Destroy(target);
+        target.transform.position = new Vector3(1000, 1000, 1000);
+        if (target.GetComponent<MeshRenderer>().material.color == Color.white)
+        {
+            Destroy(target);
+        }
         Destroy(gameObject);
     }
 

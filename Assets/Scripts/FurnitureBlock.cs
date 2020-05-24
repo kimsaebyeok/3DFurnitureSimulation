@@ -28,19 +28,25 @@ public class FurnitureBlock : MonoBehaviour
         block.transform.SetParent(listContent.transform);
 
         MeshFilter[] meshFilters = a.GetComponentsInChildren<MeshFilter>();
+        
         CombineInstance[] combine = new CombineInstance[meshFilters.Length];
+        Material mat = a.GetComponent<MeshRenderer>().material;
         int i = 0;
         while (i < meshFilters.Length)
         {
-            combine[i].mesh = meshFilters[i].sharedMesh;
+           combine[i].mesh = meshFilters[i].sharedMesh;
             combine[i].transform = meshFilters[i].transform.localToWorldMatrix;
-            //meshFilters[i].gameObject.SetActive(false);
+           meshFilters[i].gameObject.SetActive(false);
 
             i++;
         }
+        a.transform.eulerAngles =new  Vector3(-90, 0, 0);
         a.transform.GetComponent<MeshFilter>().mesh = new Mesh();
         a.transform.GetComponent<MeshFilter>().mesh.CombineMeshes(combine);
+        a.GetComponent<MeshCollider>().sharedMesh = a.transform.GetComponent<MeshFilter>().mesh;
         a.transform.gameObject.SetActive(true);
+        a.GetComponent<MeshRenderer>().material = mat;
+        
         
         categoryManage.GetComponent<CategoryManage>().Selected(a);
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CategoryOff : MonoBehaviour
 {
+    public GameObject saveButton;
     public GameObject plusButton;
     public GameObject listUI;
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class CategoryOff : MonoBehaviour
 
     public void OnClick()
     {
+        saveButton.SetActive(true);
         plusButton.SetActive(true);
         listUI.GetComponent<ManageListUI>().TurnOffCategory();
     }

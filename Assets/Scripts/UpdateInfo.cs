@@ -23,16 +23,16 @@ public class UpdateInfo : MonoBehaviour
     {
         if (isUpdated)
         {
-            if (length.text == "" || width.text == "" || height.text == "")
+            if (length.text == "" || width.text == "" || height.text == ""|| Convert.ToSingle(length.text) ==  0|| Convert.ToSingle(width.text) == 0 || Convert.ToSingle(height.text) == 0)
             { return; }
             else
             {
-                target.localScale = new Vector3(Convert.ToSingle(length.text) * target.localScale.x / lastX,
-                                                                            Convert.ToSingle(width.text) * target.localScale.y / lastZ,
-                                                                           Convert.ToSingle(height.text) * target.localScale.z / lastY);
+                target.localScale = new Vector3((Convert.ToSingle(length.text) * target.localScale.x / lastX),
+                                                                            (Convert.ToSingle(width.text) * target.localScale.y / lastY),
+                                                                           (Convert.ToSingle(height.text) * target.localScale.z / lastZ));
                 lastX = Convert.ToSingle(length.text);
-                lastY = Convert.ToSingle(height.text);
-                lastZ = Convert.ToSingle(width.text);
+                lastY = Convert.ToSingle(width.text);
+                lastZ = Convert.ToSingle(height.text);
                 isUpdated = false;
             }
         }
@@ -40,12 +40,14 @@ public class UpdateInfo : MonoBehaviour
 
     public void Init()
     {
-        lastX = target.transform.GetComponent<MeshFilter>().mesh.bounds.size.x;
-        lastZ = target.transform.GetComponent<MeshFilter>().mesh.bounds.size.z;
-        lastY = target.transform.GetComponent<MeshFilter>().mesh.bounds.size.y;
+        lastX = (int)(target.transform.GetComponent<MeshFilter>().mesh.bounds.size.x*100);
+        lastZ = (int)(target.transform.GetComponent<MeshFilter>().mesh.bounds.size.z*100);
+        lastY = (int)(target.transform.GetComponent<MeshFilter>().mesh.bounds.size.y*100);
 
-        length.text = lastX.ToString();
-        width.text = lastZ.ToString();
-        height.text = lastY.ToString();
+        length.text = (lastX).ToString();
+        width.text = (lastY).ToString();
+        height.text = (lastZ).ToString();
+
+        isUpdated = true;
     }
 }
