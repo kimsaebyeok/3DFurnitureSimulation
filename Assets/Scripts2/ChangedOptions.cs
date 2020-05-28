@@ -34,6 +34,16 @@ public class ChangedOptions : MonoBehaviour
         optionsDo.Add(new Dropdown.OptionData("강원도"));
         optionsDo.Add(new Dropdown.OptionData("경상남도"));
         optionsDo.Add(new Dropdown.OptionData("경상북도"));
+        optionsDo.Add(new Dropdown.OptionData("서울특별시"));
+        optionsDo.Add(new Dropdown.OptionData("부산광역시"));
+        optionsDo.Add(new Dropdown.OptionData("대구광역시"));
+        optionsDo.Add(new Dropdown.OptionData("인천광역시"));
+        optionsDo.Add(new Dropdown.OptionData("광주광역시"));
+        optionsDo.Add(new Dropdown.OptionData("대전광역시"));
+        optionsDo.Add(new Dropdown.OptionData("울산광역시"));
+        optionsDo.Add(new Dropdown.OptionData("세종특별자치시"));
+        optionsDo.Add(new Dropdown.OptionData("제주도"));
+
         dropdownDo.options = optionsDo;
 
         optionsSi.Add(new Dropdown.OptionData("가평군"));
@@ -213,7 +223,7 @@ public class ChangedOptions : MonoBehaviour
             optionsSi.Add(new Dropdown.OptionData("양구군"));
             dropdownSi.options = optionsSi;
         }
-        if (dropdownDo.value == 6)
+        else if (dropdownDo.value == 6)
         {
             optionsSi.Clear();
             optionsSi.Add(new Dropdown.OptionData("창원시"));
@@ -236,7 +246,7 @@ public class ChangedOptions : MonoBehaviour
             optionsSi.Add(new Dropdown.OptionData("의령군"));
             dropdownSi.options = optionsSi;
         }
-        if (dropdownDo.value == 7)
+        else if (dropdownDo.value == 7)
         {
             optionsSi.Clear();
             optionsSi.Add(new Dropdown.OptionData("포항시"));
@@ -262,6 +272,146 @@ public class ChangedOptions : MonoBehaviour
             optionsSi.Add(new Dropdown.OptionData("봉화군"));
             optionsSi.Add(new Dropdown.OptionData("울진군"));
             optionsSi.Add(new Dropdown.OptionData("울릉군"));
+            dropdownSi.options = optionsSi;
+        }
+        else if (dropdownDo.value == 8)
+        {
+            optionsSi.Clear();
+            optionsSi.Add(new Dropdown.OptionData("종로구"));
+            optionsSi.Add(new Dropdown.OptionData("중구"));
+            optionsSi.Add(new Dropdown.OptionData("용산구"));
+            optionsSi.Add(new Dropdown.OptionData("성동구"));
+            optionsSi.Add(new Dropdown.OptionData("광진구"));
+            optionsSi.Add(new Dropdown.OptionData("동대문구"));
+            optionsSi.Add(new Dropdown.OptionData("중랑구"));
+            optionsSi.Add(new Dropdown.OptionData("성북구"));
+            optionsSi.Add(new Dropdown.OptionData("강북구"));
+            optionsSi.Add(new Dropdown.OptionData("도봉구"));
+            optionsSi.Add(new Dropdown.OptionData("노원구"));
+            optionsSi.Add(new Dropdown.OptionData("은평구"));
+            optionsSi.Add(new Dropdown.OptionData("서대문구"));
+            optionsSi.Add(new Dropdown.OptionData("마포구"));
+            optionsSi.Add(new Dropdown.OptionData("양천구"));
+            optionsSi.Add(new Dropdown.OptionData("강서구"));
+            optionsSi.Add(new Dropdown.OptionData("구로구"));
+            optionsSi.Add(new Dropdown.OptionData("금천구"));
+            optionsSi.Add(new Dropdown.OptionData("영등포구"));
+            optionsSi.Add(new Dropdown.OptionData("동작구"));
+            optionsSi.Add(new Dropdown.OptionData("관악구"));
+            optionsSi.Add(new Dropdown.OptionData("서초구"));
+            optionsSi.Add(new Dropdown.OptionData("강남구"));
+            optionsSi.Add(new Dropdown.OptionData("송파구"));
+            optionsSi.Add(new Dropdown.OptionData("강동구"));
+            dropdownSi.options = optionsSi;
+        }
+        else if (dropdownDo.value == 9)
+        {
+            optionsSi.Clear();
+            optionsSi.Add(new Dropdown.OptionData("서구"));
+            optionsSi.Add(new Dropdown.OptionData("중구"));
+            optionsSi.Add(new Dropdown.OptionData("동구"));
+            optionsSi.Add(new Dropdown.OptionData("영도구"));
+            optionsSi.Add(new Dropdown.OptionData("부산진구"));
+            optionsSi.Add(new Dropdown.OptionData("동래구"));
+            optionsSi.Add(new Dropdown.OptionData("남구"));
+            optionsSi.Add(new Dropdown.OptionData("북구"));
+            optionsSi.Add(new Dropdown.OptionData("해운대구"));
+            optionsSi.Add(new Dropdown.OptionData("사하구"));
+            optionsSi.Add(new Dropdown.OptionData("금정구"));
+            optionsSi.Add(new Dropdown.OptionData("강서구"));
+            optionsSi.Add(new Dropdown.OptionData("연제구"));
+            optionsSi.Add(new Dropdown.OptionData("수영구"));
+            optionsSi.Add(new Dropdown.OptionData("사상구"));
+            optionsSi.Add(new Dropdown.OptionData("기장군"));
+            dropdownSi.options = optionsSi;
+        }
+        else if (dropdownDo.value == 10)
+        {
+            optionsSi.Clear();
+            optionsSi.Add(new Dropdown.OptionData("남구"));
+            optionsSi.Add(new Dropdown.OptionData("중구"));
+            optionsSi.Add(new Dropdown.OptionData("서구"));
+            optionsSi.Add(new Dropdown.OptionData("동구"));
+            optionsSi.Add(new Dropdown.OptionData("북구"));
+            optionsSi.Add(new Dropdown.OptionData("수성구"));
+            optionsSi.Add(new Dropdown.OptionData("달서구"));
+            optionsSi.Add(new Dropdown.OptionData("달성군"));
+            dropdownSi.options = optionsSi;
+        }
+        else if (dropdownDo.value == 11)
+        {
+            optionsSi.Clear();
+            optionsSi.Add(new Dropdown.OptionData("동구"));
+            optionsSi.Add(new Dropdown.OptionData("중구"));
+            optionsSi.Add(new Dropdown.OptionData("미추홀구"));
+            optionsSi.Add(new Dropdown.OptionData("연수구"));
+            optionsSi.Add(new Dropdown.OptionData("남동구"));
+            optionsSi.Add(new Dropdown.OptionData("부평구"));
+            optionsSi.Add(new Dropdown.OptionData("계양구"));
+            optionsSi.Add(new Dropdown.OptionData("서구"));
+            optionsSi.Add(new Dropdown.OptionData("강화구"));
+            optionsSi.Add(new Dropdown.OptionData("옹진군"));
+            dropdownSi.options = optionsSi;
+        }
+        else if (dropdownDo.value == 12)
+        {
+            optionsSi.Clear();
+            optionsSi.Add(new Dropdown.OptionData("동구"));
+            optionsSi.Add(new Dropdown.OptionData("서구"));
+            optionsSi.Add(new Dropdown.OptionData("남구"));
+            optionsSi.Add(new Dropdown.OptionData("북구"));
+            optionsSi.Add(new Dropdown.OptionData("광산구"));
+            dropdownSi.options = optionsSi;
+        }
+        else if (dropdownDo.value == 13)
+        {
+            optionsSi.Clear();
+            optionsSi.Add(new Dropdown.OptionData("동구"));
+            optionsSi.Add(new Dropdown.OptionData("중구"));
+            optionsSi.Add(new Dropdown.OptionData("서구"));
+            optionsSi.Add(new Dropdown.OptionData("유성구"));
+            optionsSi.Add(new Dropdown.OptionData("대덕구"));
+            dropdownSi.options = optionsSi;
+        }
+        else if (dropdownDo.value == 14)
+        {
+            optionsSi.Clear();
+            optionsSi.Add(new Dropdown.OptionData("남구"));
+            optionsSi.Add(new Dropdown.OptionData("중구"));
+            optionsSi.Add(new Dropdown.OptionData("동구"));
+            optionsSi.Add(new Dropdown.OptionData("북구"));
+            optionsSi.Add(new Dropdown.OptionData("울주군"));
+            dropdownSi.options = optionsSi;
+        }
+        else if (dropdownDo.value == 15)
+        {
+            optionsSi.Clear();
+            optionsSi.Add(new Dropdown.OptionData("조치원읍"));
+            optionsSi.Add(new Dropdown.OptionData("연기면"));
+            optionsSi.Add(new Dropdown.OptionData("연동면"));
+            optionsSi.Add(new Dropdown.OptionData("부강면"));
+            optionsSi.Add(new Dropdown.OptionData("금남면"));
+            optionsSi.Add(new Dropdown.OptionData("장군면"));
+            optionsSi.Add(new Dropdown.OptionData("연서면"));
+            optionsSi.Add(new Dropdown.OptionData("전의면"));
+            optionsSi.Add(new Dropdown.OptionData("전동면"));
+            optionsSi.Add(new Dropdown.OptionData("소정면"));
+            optionsSi.Add(new Dropdown.OptionData("한솔동"));
+            optionsSi.Add(new Dropdown.OptionData("새롬동"));
+            optionsSi.Add(new Dropdown.OptionData("도담동"));
+            optionsSi.Add(new Dropdown.OptionData("아름동"));
+            optionsSi.Add(new Dropdown.OptionData("종촌동"));
+            optionsSi.Add(new Dropdown.OptionData("고운동"));
+            optionsSi.Add(new Dropdown.OptionData("보람동"));
+            optionsSi.Add(new Dropdown.OptionData("대평동"));
+            optionsSi.Add(new Dropdown.OptionData("소담동"));
+            dropdownSi.options = optionsSi;
+        }
+        else if (dropdownDo.value == 16)
+        {
+            optionsSi.Clear();
+            optionsSi.Add(new Dropdown.OptionData("제주시"));
+            optionsSi.Add(new Dropdown.OptionData("서귀포시"));
             dropdownSi.options = optionsSi;
         }
     }

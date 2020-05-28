@@ -408,7 +408,8 @@ GameObject:
   - component: {fileID: -4827690027006555215}
   - component: {fileID: -5858712066497624341}
   - component: {fileID: -5166515347329711751}
-  - component: {fileID: -4952268842682883081}
+  - component: {fileID: -1324967201641238394}
+  - component: {fileID: 5363377740375828619}
   m_Layer: 0
   m_Name: tv_table_1
   m_TagString: Located Furniture
@@ -455,7 +456,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
@@ -487,7 +488,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!23 &-4952268842682883081
+--- !u!23 &-1324967201641238394
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -526,6 +527,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5363377740375828619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c39d7832f2be7d94292993ea66c52c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &100012
 GameObject:
   m_ObjectHideFlags: 0

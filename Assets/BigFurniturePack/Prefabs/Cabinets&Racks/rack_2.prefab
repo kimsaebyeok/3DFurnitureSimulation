@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8353811732469035649}
   - component: {fileID: -5590414723302944506}
   - component: {fileID: -1461096649483676287}
+  - component: {fileID: -7843988502606197275}
   m_Layer: 0
   m_Name: rack_2
   m_TagString: Located Furniture
@@ -92,7 +93,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 02153186d1a6199489fb363fb89e5cc0, type: 3}
@@ -124,3 +125,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-7843988502606197275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c39d7832f2be7d94292993ea66c52c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

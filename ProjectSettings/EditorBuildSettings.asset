@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RoomSimulator.unity
     guid: 931e358a8bdb8ac43aa8aa6144918188
+  - enabled: 1
+    path: Assets/Scenes/UserDefinedRoomCreator.unity
+    guid: 8b8685aa7640da24685842df4853ef3b
   m_configObjects: {}
