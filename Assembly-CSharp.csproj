@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{40164AF1-CB21-620C-9B84-CEF7CFC7908A}</ProjectGuid>
+    <ProjectGuid>{DE56393C-FDB7-C274-AE10-06928222B937}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\FixRegularAngle.cs" />
     <Compile Include="Assets\Scripts\CategoryManage.cs" />
     <Compile Include="Assets\Scripts\CategoryOff.cs" />
     <Compile Include="Assets\Scripts\CollisionToWall.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Assets\Scripts\UpdateInfo.cs" />
     <Compile Include="Assets\Scripts\UpdateValue.cs" />
     <Compile Include="Assets\Scripts\UserDefineButton.cs" />
+    <Compile Include="Assets\Scripts\test.cs" />
     <Compile Include="Assets\Scripts2\Address.cs" />
     <Compile Include="Assets\Scripts2\AddressDoSi.cs" />
     <Compile Include="Assets\Scripts2\AddressInfo.cs" />
@@ -94,13 +96,16 @@
     <Compile Include="Assets\Scripts2\AddressSend.cs" />
     <Compile Include="Assets\Scripts2\ChangedOptions.cs" />
     <Compile Include="Assets\Scripts2\ChoiceRoom.cs" />
+    <Compile Include="Assets\Scripts2\ChoiceRoom2.cs" />
     <Compile Include="Assets\Scripts2\CreatedRoomInfo.cs" />
     <Compile Include="Assets\Scripts2\InitialButton.cs" />
+    <Compile Include="Assets\Scripts2\InitialButton2.cs" />
     <Compile Include="Assets\Scripts2\InitialUI.cs" />
     <Compile Include="Assets\Scripts2\Password.cs" />
     <Compile Include="Assets\Scripts2\PasswordCompare.cs" />
     <Compile Include="Assets\Scripts2\RegisterRoom.cs" />
     <Compile Include="Assets\Scripts2\Reselection.cs" />
+    <Compile Include="Assets\Scripts2\Reselection2.cs" />
     <Compile Include="Assets\Scripts2\RoomCreator.cs" />
     <Compile Include="Assets\Scripts2\RoomInfo.cs" />
     <Compile Include="Assets\Scripts2\RoomInfo2.cs" />
@@ -110,11 +115,14 @@
     <Compile Include="Assets\Scripts2\SimulateRoom.cs" />
     <Compile Include="Assets\Scripts2\UserDefinedRoomCreator.cs" />
     <Compile Include="Assets\Scripts2\UserRoomInfo.cs" />
+    <Compile Include="Assets\Scripts2\UserRoomInfo2.cs" />
+    <Compile Include="Assets\Scripts2\UserRoomInfoSend.cs" />
+    <Compile Include="Assets\Scripts2\UserRoomList.cs" />
+    <Compile Include="Assets\Scripts2\UserRoomReCreated.cs" />
     <Compile Include="Assets\Scripts2\rearrange.cs" />
     <Compile Include="Assets\Value.cs" />
     <Compile Include="Assets\aaa.cs" />
     <Compile Include="Assets\ex.cs" />
-    <Compile Include="Assets\test.cs" />
     <None Include="Assets\Resource\UserFurnitureInfo.txt" />
     <None Include="Assets\Resource\SampleFurnitureInfo.txt" />
     <Reference Include="UnityEngine">
@@ -301,7 +309,7 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.14f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="LitJson">
-      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/3DFurnitureSimulation-master/Assets/Plugin/LitJson.dll</HintPath>
+      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/Furniture Simulator/Assets/Plugin/LitJson.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.14f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -649,31 +657,31 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.14f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/3DFurnitureSimulation-master/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/Furniture Simulator/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/3DFurnitureSimulation-master/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/Furniture Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/3DFurnitureSimulation-master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/Furniture Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/3DFurnitureSimulation-master/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/Furniture Simulator/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/3DFurnitureSimulation-master/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/Furniture Simulator/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/3DFurnitureSimulation-master/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/Furniture Simulator/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/3DFurnitureSimulation-master/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/Furniture Simulator/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/3DFurnitureSimulation-master/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/Furniture Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/3DFurnitureSimulation-master/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/kimse/OneDrive/바탕 화면/Furniture Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

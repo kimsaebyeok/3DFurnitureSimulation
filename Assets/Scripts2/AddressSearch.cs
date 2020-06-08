@@ -4,26 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 using LitJson;
 
-
 public class Data
 {
     public int ROOMID;
     public int roomx;
     public int roomy;
-    public int roomz;
+    public int roomz; 
+    public string addressdosi;
     public string address;
     public string password;
 
-    public Data(int id, int x, int y, int z, string address, string password)
+    public Data(int id, int x, int y, int z,string addressdosi, string address, string password)
     {
         ROOMID = id;
         roomx = x;
         roomy = y;
         roomz = z;
+        addressdosi = addressdosi;
         address = address;
         password = password;
     }
 }
+
 public class AddressSearch : MonoBehaviour
 {
     GameObject addressInfo;
@@ -45,7 +47,7 @@ public class AddressSearch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        addressDoSi = "goodJob";
+        /*addressDoSi = "goodJob";
         panel = Instantiate(roomInformationPanel) as GameObject;
         panel.transform.SetParent(scrollViewContent.transform);
         information = panel.transform.Find("Information").gameObject.transform.Find("AddressText").gameObject;
@@ -65,7 +67,7 @@ public class AddressSearch : MonoBehaviour
         value.GetComponent<Value>().y = 2;
         value.GetComponent<Value>().z = 3;
         password = panel.transform.Find("Edit").gameObject.transform.Find("Password").gameObject;
-        password.GetComponent<Password>().password = "def";
+        password.GetComponent<Password>().password = "def";*/
 
 
         addressInfo = GameObject.Find("AddressInformation");
@@ -77,14 +79,14 @@ public class AddressSearch : MonoBehaviour
 
         Destroy(addressInfo);
 
-        //StartCoroutine(Send());
+        StartCoroutine(Send());
         //addressPanel.AddComponent<>();
     }
 
     IEnumerator Send()
     {
-        int x, y, z;
-        string ip = "10.27.18.22";
+        int x, y, z, id;
+        string ip = "10.14.4.49";
         www = new WWW("http://" + ip + "/~kim/search.php?do=" + Do + "&si=" + Si);
         yield return www;
 
@@ -97,8 +99,10 @@ public class AddressSearch : MonoBehaviour
             panel = Instantiate(roomInformationPanel) as GameObject;
             panel.transform.SetParent(scrollViewContent.transform);
             information = panel.transform.Find("Information").gameObject.transform.Find("AddressText").gameObject;
-            information.GetComponent<Text>().text = itemdata[i]["address"].ToString();
+            information.GetComponent<Text>().text = itemdata[i]["addressdosi"].ToString() + " " + itemdata[i]["address"].ToString();
             value = panel.transform.Find("Information").gameObject.transform.Find("Value").gameObject;
+            int.TryParse(itemdata[i]["ROOMID"].ToString(), out id);
+            value.GetComponent<Value>().roomId = id;
             int.TryParse(itemdata[i]["roomx"].ToString(), out x);
             value.GetComponent<Value>().x = x;
             int.TryParse(itemdata[i]["roomy"].ToString(), out y);

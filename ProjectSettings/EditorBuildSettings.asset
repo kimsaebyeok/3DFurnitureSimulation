@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UserDefinedRoomCreator.unity
     guid: 8b8685aa7640da24685842df4853ef3b
+  - enabled: 1
+    path: Assets/Scenes/UserDefinedRoomSearcher.unity
+    guid: 5bfe2763ff33d884f87489b8fbb1df44
   m_configObjects: {}

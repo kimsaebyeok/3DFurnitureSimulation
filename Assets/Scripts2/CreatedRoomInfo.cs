@@ -11,6 +11,7 @@ public class CreatedRoomInfo : MonoBehaviour
     public int x;
     public int y;
     public int z;
+    public int roomId;
     public GameObject createdRoomObject;
     // Start is called before the first frame update
     void Start()

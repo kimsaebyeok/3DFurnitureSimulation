@@ -54,14 +54,21 @@ public class CategoryManage : MonoBehaviour
     public void Selected(GameObject furniture)
     {
         locatingUI.SetActive(true);
-        locatingUI.GetComponent<LocatingManager>().Set(furniture,spwanPoint.transform.position,new Vector3(1,1,1));
+        locatingUI.GetComponent<LocatingManager>().Set(furniture,spwanPoint.transform.position, new Vector3(1,1,1));
+        listUI.SetActive(false);
+    }
+
+    public void Selected(GameObject furniture, Vector3 position ,Vector3 scale)
+    {
+        locatingUI.SetActive(true);
+        locatingUI.GetComponent<LocatingManager>().Set(furniture, position, scale);
         listUI.SetActive(false);
     }
 
     private FurnitureBlock MakeBlock(int num)
     {
         var newFurnifure = Instantiate(prefab).GetComponent<FurnitureBlock>();
-        newFurnifure.FurnitureData = furnitureData[num];
+        newFurnifure.furnitureData = furnitureData[num];
         newFurnifure.Setting();
 
         return newFurnifure;

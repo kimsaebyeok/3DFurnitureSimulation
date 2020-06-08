@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class RoomInfo : MonoBehaviour
 {
-    public string roomID;
     public string addressDoSi;
     public string address;
+    public int roomId = 0;
     public int x = 0;
     public int y = 0;
     public int z = 0;

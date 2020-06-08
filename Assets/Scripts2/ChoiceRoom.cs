@@ -36,6 +36,7 @@ public class ChoiceRoom : MonoBehaviour
         button1.GetComponent<SimulInfoSend2>().x = gameObject.transform.Find("Value").gameObject.GetComponent<Value>().x;
         button1.GetComponent<SimulInfoSend2>().y = gameObject.transform.Find("Value").gameObject.GetComponent<Value>().y;
         button1.GetComponent<SimulInfoSend2>().z = gameObject.transform.Find("Value").gameObject.GetComponent<Value>().z;
+        button1.GetComponent<SimulInfoSend2>().roomId = gameObject.transform.Find("Value").gameObject.GetComponent<Value>().roomId;
 
         backButton = GameObject.Find("Back").gameObject;
         backButton.SetActive(false);

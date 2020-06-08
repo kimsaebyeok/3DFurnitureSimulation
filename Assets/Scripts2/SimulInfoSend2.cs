@@ -8,6 +8,7 @@ public class SimulInfoSend2 : MonoBehaviour
     public string address;
     public string addressDoSi;
     public int x, y, z = 0;
+    public int roomId = 0;
     public GameObject content;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class SimulInfoSend2 : MonoBehaviour
     {
         ri.address = address;
         ri.addressDoSi = addressDoSi;
+        ri.roomId = roomId;
         ri.x = x;
         ri.y = y;
         ri.z = z;

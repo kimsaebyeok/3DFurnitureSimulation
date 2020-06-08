@@ -8,6 +8,7 @@ public class LocatingManager : MonoBehaviour
     public GameObject joystick;
     public GameObject leftRotate;
     public GameObject rightRotate;
+    public GameObject regularRotate;
     public GameObject infoPanel;
     public GameObject block;
     // Start is called before the first frame update
@@ -26,12 +27,15 @@ public class LocatingManager : MonoBehaviour
     {
         target = a;
         a.transform.position = position;
-        a.transform.localScale = scale;
         joystick.GetComponent<Joystick>().selectedFurniture = a.transform;
         leftRotate.GetComponent<LeftRotate>().target = a.transform;
         rightRotate.GetComponent<RightRotate>().target = a.transform;
+        regularRotate.GetComponent<FixRegularAngle>().target = a.transform;
         infoPanel.GetComponent<UpdateInfo>().target = a.transform;
-        infoPanel.GetComponent<UpdateInfo>().Init();
+        if(scale.x == 1 && scale.y == 1 && scale.z ==1)
+            infoPanel.GetComponent<UpdateInfo>().Init();
+        else
+            infoPanel.GetComponent<UpdateInfo>().Init(scale);
     }
 
     public void ModifyInfo()

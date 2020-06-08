@@ -50,4 +50,17 @@ public class UpdateInfo : MonoBehaviour
 
         isUpdated = true;
     }
+
+    public void Init(Vector3 scale)
+    {
+        lastX = scale.x;
+        lastZ = scale.y;
+        lastY = scale.z;
+
+        length.text = (lastX).ToString();
+        width.text = (lastY).ToString();
+        height.text = (lastZ).ToString();
+
+        isUpdated = true;
+    }
 }
