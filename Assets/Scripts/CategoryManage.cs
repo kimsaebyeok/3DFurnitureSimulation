@@ -17,6 +17,7 @@ public class CategoryManage : MonoBehaviour
     public GameObject locatedList;
     public GameObject listUI;
     public GameObject spwanPoint;
+    public GameObject loader;
     public int initialSize = 10;
 
     // Start is called before the first frame update
@@ -54,14 +55,7 @@ public class CategoryManage : MonoBehaviour
     public void Selected(GameObject furniture)
     {
         locatingUI.SetActive(true);
-        locatingUI.GetComponent<LocatingManager>().Set(furniture,spwanPoint.transform.position, new Vector3(1,1,1));
-        listUI.SetActive(false);
-    }
-
-    public void Selected(GameObject furniture, Vector3 position ,Vector3 scale)
-    {
-        locatingUI.SetActive(true);
-        locatingUI.GetComponent<LocatingManager>().Set(furniture, position, scale);
+        locatingUI.GetComponent<LocatingManager>().Set(furniture,furniture.transform.position,furniture.transform.rotation.eulerAngles);
         listUI.SetActive(false);
     }
 

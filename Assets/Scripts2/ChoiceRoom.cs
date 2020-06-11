@@ -10,6 +10,7 @@ public class ChoiceRoom : MonoBehaviour
     private GameObject button1;
     private GameObject button2;
     private GameObject backButton;
+    public GameObject edit;
 
     // Start is called before the first frame update
     void Start()

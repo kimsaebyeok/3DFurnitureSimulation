@@ -11,6 +11,7 @@ public class FurnitureBlock : MonoBehaviour
     public GameObject locatedListBlock;
     public GameObject locatedList;
     public GameObject listContent;
+    public GameObject confirmButton;
    
     // Start is called before the first frame update
 
@@ -20,7 +21,7 @@ public class FurnitureBlock : MonoBehaviour
 
         GameObject block = Instantiate(locatedListBlock);
         block.GetComponent<LocatedListBlock>().target = a;
-        block.GetComponent<LocatedListBlock>().Setting(furnitureData);
+        block.GetComponent<LocatedListBlock>().Setting(furnitureData,new Vector3(0,0,0),new Vector3(-90,0,0),new Vector3(1,1,1));
         locatingUI.GetComponent<LocatingManager>().block = block;
 
         block.transform.SetParent(listContent.transform);
@@ -48,13 +49,14 @@ public class FurnitureBlock : MonoBehaviour
         
         categoryManage.GetComponent<CategoryManage>().Selected(a);
     }
-    public void LoadFurniture(Vector3 position, Vector3 scale)
+    public GameObject LoadFurniture(Vector3 position, Vector3 rotation, Vector3 scale)
     {
+        Debug.Log("안녕시발!!!!");
         GameObject a = Instantiate(furnitureData.FurniturePrefab);
 
         GameObject block = Instantiate(locatedListBlock);
         block.GetComponent<LocatedListBlock>().target = a;
-        block.GetComponent<LocatedListBlock>().Setting(furnitureData);
+        block.GetComponent<LocatedListBlock>().Setting(furnitureData,position,scale,rotation);
         locatingUI.GetComponent<LocatingManager>().block = block;
 
         block.transform.SetParent(listContent.transform);
@@ -79,8 +81,14 @@ public class FurnitureBlock : MonoBehaviour
         a.transform.gameObject.SetActive(true);
         a.GetComponent<MeshRenderer>().material = mat;
 
+        a.transform.position = position;
+        a.transform.rotation = Quaternion.Euler(rotation);
 
-        categoryManage.GetComponent<CategoryManage>().Selected(a,position,scale);
+        categoryManage.GetComponent<CategoryManage>().Selected(a);
+
+        confirmButton.GetComponent<ConfirmItem>().OnClick();
+
+        return a;
     }
 
     public void Setting()

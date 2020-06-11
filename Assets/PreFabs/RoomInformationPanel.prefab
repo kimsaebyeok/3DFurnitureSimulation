@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364661342b74d8941a53c96d44c9f05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomId: 0
   x: 0
   y: 0
   z: 0
@@ -668,3 +669,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0307ce677fabe154780c82ad5ab3ae92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  edit: {fileID: 6964574350215765371}

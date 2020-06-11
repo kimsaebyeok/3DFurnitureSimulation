@@ -12,10 +12,13 @@ public class LocatedListBlock : MonoBehaviour
     public GameObject confirm;
     private Vector3 position;
     public Vector3 Position { get { return position; } }
+    private Vector3 rotation;
+    public Vector3 Rotation { get { return rotation; } }
     private Vector3 scale;
     public Vector3 Scale { get { return scale; } }
     private FurnitureData info;
     public FurnitureData Info { get { return info; } }
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,16 +32,19 @@ public class LocatedListBlock : MonoBehaviour
         
     }
 
-    public void Setting(FurnitureData data)
+    public void Setting(FurnitureData data,Vector3 positiondata, Vector3 rotationData, Vector3 scaleData)
     {
         info = data;
         gameObject.transform.Find("Text").GetComponent<Text>().text = info.FurnitureName;
+        position = positiondata;
+        rotation = rotationData;
+        scale = scaleData;
     }
 
     public void OnClick()
     {
         locatingUI.SetActive(true);
-        locatingUI.GetComponent<LocatingManager>().Set(target, position, scale);
+        locatingUI.GetComponent<LocatingManager>().Set(target, position, rotation);
         locatingUI.GetComponent<LocatingManager>().block = gameObject;
         locatingUI.GetComponent<LocatingManager>().target = target;
         delete.SetActive(true);
@@ -56,9 +62,10 @@ public class LocatedListBlock : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void RealFurnituring(Vector3 positionData, Vector3 scaleData)
+    public void RealFurnituring(Vector3 positionData, Vector3 scaleData, Vector3 rotationData)
     {
         position = positionData;
         scale = scaleData;
+        rotation = rotationData;
     }
 }

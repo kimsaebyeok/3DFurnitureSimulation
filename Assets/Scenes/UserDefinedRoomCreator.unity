@@ -1683,7 +1683,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 784114041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7eb6cd18aa0eaa4bbd087dbb0d21ecc, type: 3}
+  m_Script: {fileID: 11500000, guid: a1cd88f4c28d4eb488ab2280a0a9782c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &829928147
@@ -2604,6 +2604,7 @@ GameObject:
   - component: {fileID: 1990943034}
   - component: {fileID: 1990943033}
   - component: {fileID: 1990943039}
+  - component: {fileID: 1990943040}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2757,6 +2758,22 @@ MonoBehaviour:
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+--- !u!114 &1990943040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990943032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f37f40444ce29c4dac4b2a97d870f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: {fileID: 297732399}
+  x: {fileID: 574502763}
+  y: {fileID: 497431498}
+  z: {fileID: 1480342815}
 --- !u!1 &2020066802
 GameObject:
   m_ObjectHideFlags: 0

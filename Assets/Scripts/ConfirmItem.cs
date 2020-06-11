@@ -6,6 +6,7 @@ public class ConfirmItem : MonoBehaviour
 {
     public GameObject locatedUI;
     public GameObject listUI;
+    public GameObject target;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class ConfirmItem : MonoBehaviour
 
     public void OnClick()
     {
-       locatedUI.GetComponent<LocatingManager>().ModifyInfo();
+       locatedUI.GetComponent<LocatingManager>().ModifyInfo(target);
         listUI.SetActive(true);
         locatedUI.SetActive(false);
     }

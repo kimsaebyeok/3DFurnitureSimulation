@@ -86,7 +86,7 @@ public class AddressSearch : MonoBehaviour
     IEnumerator Send()
     {
         int x, y, z, id;
-        string ip = "10.14.4.49";
+        string ip = "192.168.0.13";
         www = new WWW("http://" + ip + "/~kim/search.php?do=" + Do + "&si=" + Si);
         yield return www;
 
@@ -99,7 +99,7 @@ public class AddressSearch : MonoBehaviour
             panel = Instantiate(roomInformationPanel) as GameObject;
             panel.transform.SetParent(scrollViewContent.transform);
             information = panel.transform.Find("Information").gameObject.transform.Find("AddressText").gameObject;
-            information.GetComponent<Text>().text = itemdata[i]["addressdosi"].ToString() + " " + itemdata[i]["address"].ToString();
+            information.GetComponent<Text>().text =  itemdata[i]["address"].ToString(); //itemdata[i]["addressdosi"].ToString() + " " +
             value = panel.transform.Find("Information").gameObject.transform.Find("Value").gameObject;
             int.TryParse(itemdata[i]["ROOMID"].ToString(), out id);
             value.GetComponent<Value>().roomId = id;

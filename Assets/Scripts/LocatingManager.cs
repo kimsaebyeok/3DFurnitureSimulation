@@ -11,6 +11,7 @@ public class LocatingManager : MonoBehaviour
     public GameObject regularRotate;
     public GameObject infoPanel;
     public GameObject block;
+    public GameObject confirmButtton;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,23 +24,22 @@ public class LocatingManager : MonoBehaviour
         
     }
 
-    public void Set(GameObject a,Vector3 position, Vector3 scale)
+    public void Set(GameObject a,Vector3 position, Vector3 rotation)
     {
         target = a;
+        confirmButtton.GetComponent<ConfirmItem>().target = a;
         a.transform.position = position;
+        a.transform.rotation = Quaternion.Euler(rotation);
         joystick.GetComponent<Joystick>().selectedFurniture = a.transform;
         leftRotate.GetComponent<LeftRotate>().target = a.transform;
         rightRotate.GetComponent<RightRotate>().target = a.transform;
         regularRotate.GetComponent<FixRegularAngle>().target = a.transform;
         infoPanel.GetComponent<UpdateInfo>().target = a.transform;
-        if(scale.x == 1 && scale.y == 1 && scale.z ==1)
-            infoPanel.GetComponent<UpdateInfo>().Init();
-        else
-            infoPanel.GetComponent<UpdateInfo>().Init(scale);
+        infoPanel.GetComponent<UpdateInfo>().Init();
     }
 
-    public void ModifyInfo()
+    public void ModifyInfo(GameObject b)
     {
-        block.GetComponent<LocatedListBlock>().RealFurnituring(target.transform.position, target.transform.localScale);
+        block.GetComponent<LocatedListBlock>().RealFurnituring(b.transform.position, b.transform.localScale,b.transform.rotation.eulerAngles);
     }
 }

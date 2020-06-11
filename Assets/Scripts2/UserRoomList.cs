@@ -52,14 +52,14 @@ public class UserRoomList : MonoBehaviour
         value.GetComponent<Value>().z = 3;
 
 
-        //StartCoroutine(Send());
+       // StartCoroutine(Send());
         //addressPanel.AddComponent<>();
     }
 
     IEnumerator Send()
     {
         int x, y, z;
-        //string ip = "10.27.18.22";
+        string ip = "10.27.18.22";
         //www = new WWW("http://" + ip + "/~kim/search.php?do=" + Do + "&si=" + Si); -> 모두 읽어오는 코드로 변경
         yield return www;
 
@@ -69,7 +69,7 @@ public class UserRoomList : MonoBehaviour
 
         for (int i = 0; i < itemdata.Count; i++)
         {
-            /*panel = Instantiate(userRoomInformationPanel) as GameObject;
+            panel = Instantiate(userRoomInformationPanel) as GameObject;
             panel.transform.SetParent(scrollViewContent.transform);
             information = panel.transform.Find("Information").gameObject.transform.Find("RoomNameText").gameObject;
             information.GetComponent<Text>().text = itemdata[i]["roomName"].ToString();
@@ -79,7 +79,7 @@ public class UserRoomList : MonoBehaviour
             int.TryParse(itemdata[i]["roomy"].ToString(), out y);
             value.GetComponent<Value>().y = y;
             int.TryParse(itemdata[i]["roomz"].ToString(), out z);
-            value.GetComponent<Value>().z = z;*/
+            value.GetComponent<Value>().z = z;
         }
     }
 

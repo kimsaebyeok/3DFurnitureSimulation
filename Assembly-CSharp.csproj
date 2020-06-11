@@ -114,6 +114,8 @@
     <Compile Include="Assets\Scripts2\SimulInfoSend2.cs" />
     <Compile Include="Assets\Scripts2\SimulateRoom.cs" />
     <Compile Include="Assets\Scripts2\UserDefinedRoomCreator.cs" />
+    <Compile Include="Assets\Scripts2\UserDefinedRoomEditor.cs" />
+    <Compile Include="Assets\Scripts2\UserDefinedRoomSearcher.cs" />
     <Compile Include="Assets\Scripts2\UserRoomInfo.cs" />
     <Compile Include="Assets\Scripts2\UserRoomInfo2.cs" />
     <Compile Include="Assets\Scripts2\UserRoomInfoSend.cs" />
