@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using LitJson;
+
 
 public class SimulateRoom : MonoBehaviour
 {
+    WWW www;
+    int roomId = 0;
+    int x = 0, y = 0, z = 0;
     public Text addressDoSi;
     public CreatedRoomInfo cr;
     public InputField password;
@@ -25,7 +30,6 @@ public class SimulateRoom : MonoBehaviour
     }
     public void OnClick()
     {
-        int x = 0, y = 0, z = 0;
         bool result;
         password.text = password.text.Trim();
         address.text = address.text.Trim();
@@ -57,13 +61,44 @@ public class SimulateRoom : MonoBehaviour
             return;
         }
 
+        StartCoroutine(Send());
+ 
         cr.password = password.text;
         cr.addressDoSi = addressDoSi.text;
         cr.address = address.text;
         cr.x = x;
         cr.y = y;
         cr.z = z;
+        cr.roomId = roomId;
+
+      
 
         cr.call();
     }
+
+    IEnumerator Send()
+    {
+        
+        
+        string ip = "192.168.0.13";
+
+        www = new WWW("http://" + ip + "/~kim/add.php?roomx=" + x + "&roomy= " + y + " &roomz= " + z + " &addressdosi= " + addressDoSi.text + "&address=" + address.text + " &password=" + password.text);
+        Debug.Log("안녕1212");
+        Debug.Log(www.text);
+
+        yield return www;
+
+        JsonData itemdata = JsonMapper.ToObject(www.text);
+
+        Debug.Log(itemdata.Count);
+        Debug.Log(www.text);
+
+        for (int i = 0; i < itemdata.Count; i++)
+        {
+            Debug.Log(itemdata[i]["ROOMID"].ToString() + "병수");
+            int.TryParse(itemdata[i]["ROOMID"].ToString(), out roomId);
+        }
+    }
+
+
 }

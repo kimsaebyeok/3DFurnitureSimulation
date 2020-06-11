@@ -85,7 +85,8 @@ public class AddressSearch : MonoBehaviour
 
     IEnumerator Send()
     {
-        int x, y, z, id;
+        int x, y, z;
+        int id;
         string ip = "192.168.0.13";
         www = new WWW("http://" + ip + "/~kim/search.php?do=" + Do + "&si=" + Si);
         yield return www;

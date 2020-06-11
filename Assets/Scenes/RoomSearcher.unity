@@ -403,7 +403,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 104159635}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999955
+  m_Size: 0.5
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -669,7 +669,6 @@ MonoBehaviour:
   ri: {fileID: 1130609202}
   address: 
   addressDoSi: 
-  password: 
   x: 0
   y: 0
   z: 0
@@ -743,10 +742,10 @@ RectTransform:
   m_Father: {fileID: 2079859639}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240, y: 6}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 100, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &706165301
 MonoBehaviour:
@@ -769,11 +768,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -890,7 +889,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -218.99998}
+  m_AnchoredPosition: {x: 0, y: -156.6891}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &830515770
@@ -1045,7 +1044,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990838305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2083235921}
@@ -1055,8 +1054,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 81, y: 5}
-  m_SizeDelta: {x: 473.7019, y: 30}
+  m_AnchoredPosition: {x: 68, y: 0}
+  m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &990838307
 MonoBehaviour:
@@ -1364,7 +1363,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addressDoSi: 
   address: 
-  password: 
   roomId: 0
   x: 0
   y: 0
@@ -2031,10 +2029,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2190,8 +2188,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -102.5177, y: 25.972237}
-  m_SizeDelta: {x: 205.0354, y: 51.944473}
+  m_AnchoredPosition: {x: -200, y: 25.972237}
+  m_SizeDelta: {x: 400, y: 51.944473}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1792983353
 MonoBehaviour:
@@ -2342,8 +2340,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 102.517685, y: 25.972237}
-  m_SizeDelta: {x: 205.03537, y: 51.944473}
+  m_AnchoredPosition: {x: 200, y: 25.972237}
+  m_SizeDelta: {x: 400, y: 51.944473}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2037484497
 MonoBehaviour:
@@ -2673,10 +2671,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 2
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2684,8 +2682,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBC29 \uC0DD\uC131 \uC2DC\uC758 \uBE44\uBC00\uBC88\uD638\uB97C \uC785\uB825
-    \uD6C4 \uD3B8\uC9D1\uC744 \uB20C\uB7EC \uC8FC\uC138\uC694."
+  m_Text: "\uBC29 \uC0DD\uC131 \uC2DC\uC758 \uBE44\uBC00\uBC88\uD638\uB97C \uC785\uB825\uD558\uC138\uC694."
 --- !u!222 &2083235923
 CanvasRenderer:
   m_ObjectHideFlags: 0

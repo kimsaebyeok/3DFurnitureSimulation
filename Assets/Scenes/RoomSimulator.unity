@@ -900,8 +900,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c7351bcf56d98147a08e0c39dcd0d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plane: {fileID: 0}
-  list: {fileID: 1826288865}
+  plane: {fileID: 1826288865}
+  list: {fileID: 1310315808}
   info: 
   isUR: 1
   x: 0
@@ -4127,6 +4127,7 @@ GameObject:
   - component: {fileID: 1156281040}
   - component: {fileID: 1156281039}
   - component: {fileID: 1156281038}
+  - component: {fileID: 1156281043}
   m_Layer: 5
   m_Name: PlusImage
   m_TagString: Untagged
@@ -4256,6 +4257,27 @@ RectTransform:
   m_AnchoredPosition: {x: -27, y: 19}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 1, y: 0}
+--- !u!223 &1156281043
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156281037}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1178787547
 GameObject:
   m_ObjectHideFlags: 0

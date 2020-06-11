@@ -91,15 +91,8 @@ public class LoadingRoom : MonoBehaviour
 
             }
 
-            while (itemdata== null)
-            {
                 StartCoroutine(Send());
-                if(itemdata != null)
-                {
-                    break;
-                }
-
-            }
+        
 
             Debug.Log(itemdata.Count + "ㅎㅇ");
 

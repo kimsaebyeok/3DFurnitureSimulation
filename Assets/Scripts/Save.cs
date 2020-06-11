@@ -24,13 +24,13 @@ public class Save : MonoBehaviour
     public string roomName;
     public string password;
 
-    public string rid = null;
+    public string rid;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(LaSend());
     }
 
     // Update is called once per frame
@@ -41,18 +41,15 @@ public class Save : MonoBehaviour
     public void OnClick()
     {
 
-        StartCoroutine(Send());
+        //StartCoroutine(Send());
 
-        while (rid == null) { }
-
-
-
+        
         string ip = "192.168.0.13";
 
         LocatedListBlock[] blocks = list.GetComponentsInChildren<LocatedListBlock>();
         for (int i = 0; i < blocks.Length; i++)
         {
-            info = "http://" + ip + "//~kim/addobject.php? ROOMID=100";
+            info = "http://" + ip + "//~kim/addobject.php?ROOMID=" + rid;
             info = info + "&objectx=" + blocks[i].Position.x.ToString();
             info = info + "&objecty=" + blocks[i].Position.y.ToString();
             info = info + "&objectz=" + blocks[i].Position.z.ToString();
@@ -65,18 +62,35 @@ public class Save : MonoBehaviour
             StartCoroutine(ObSend());
         }
 
-
     }
     IEnumerator ObSend()
     {
         www = new WWW(info);
         yield return www;
     }
+
+    IEnumerator LaSend()
+    {
+        string ip = "192.168.0.13";
+
+        www = new WWW("http://" + ip + "/~kim/searchlast.php");
+        //Debug.Log("안녕123123");
+        yield return www;
+
+        JsonData itemdata = JsonMapper.ToObject(www.text);
+
+        // Debug.Log(www.text);
+
+        for (int i = 0; i < itemdata.Count; i++)
+        {
+            Debug.Log(itemdata[i]["ROOMID"].ToString() + "병수");
+            rid = itemdata[i]["ROOMID"].ToString();
+            Debug.Log(rid + "rid");
+        }
+    }
     IEnumerator Send()
     {
 
-
-        //Debug.Log(www.text);
 
         userRoomInfo = GameObject.Find("UserRoomInformation");
         roomInfo = GameObject.Find("RoomInformation");
@@ -93,20 +107,22 @@ public class Save : MonoBehaviour
             z = cr.z;
            // roomId = cr.roomId;
             password = cr.password;
-            Debug.Log(roomId);
+            //Debug.Log(roomId + "fuck");
         }
         string ip = "192.168.0.13";
 
         www = new WWW("http://" + ip + "/~kim/add.php?roomx=" + x + "&roomy= " + y + " &roomz= " + z + " &addressdosi= " + addressDoSi + "&address=" + address + " &password=" + password);
-        Debug.Log("안녕");
+        //Debug.Log("안녕123123");
         yield return www;
 
         JsonData itemdata = JsonMapper.ToObject(www.text);
 
+       // Debug.Log(www.text);
+
         for (int i = 0; i < itemdata.Count; i++)
         {
-            rid =itemdata[i]["ROOMID"].ToString();
-            
+            Debug.Log(itemdata[i]["ROOMID"].ToString() + "병수");
+            int.TryParse(itemdata[i]["ROOMID"].ToString(), out cr.roomId);
             
         }
     }
